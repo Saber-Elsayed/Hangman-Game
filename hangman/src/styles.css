@@ -1,0 +1,96 @@
+:root {
+  --bg-color: lightseagreen;
+  --white: rgb(247, 247, 247);
+  --black: rgb(31, 31, 31);
+
+  --border-radius-sm: 3px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background: var(--bg-color);
+  color: var(--white);
+}
+
+.App {
+  text-align: center;
+}
+
+.App h1 {
+  font-size: 3.5rem;
+}
+
+.Guess {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.Letters button {
+  background: var(--white);
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  margin: 0.3rem;
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: var(--border-radius-sm);
+  color: var(--black);
+}
+
+.Letters button:disabled {
+  color: rgb(94, 94, 94);
+  background: var(--black);
+}
+
+.container {
+  position: relative;
+}
+
+.Hangman {
+  background: var(--white);
+  margin-top: 2rem;
+  border-radius: var(--border-radius-sm);
+  border: none;
+}
+
+.WinLose {
+  padding: 2.5rem 5rem;
+  border-radius: var(--border-radius-sm);
+  color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.WinLose.win {
+  background: var(--bg-color);
+}
+
+.WinLose.lose {
+  background: hsl(0, 60%, 50%);
+}
+
+.PlayAgainBtn button {
+  border: none;
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  font-family: inherit;
+  color: var(--black);
+  font-weight: bold;
+  margin-top: 1rem;
+}
